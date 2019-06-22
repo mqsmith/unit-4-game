@@ -8,7 +8,16 @@ html body{
     
 }
 
+.list-group{
+    color: black;
+}
 
+.gipy-embed{
+    width: 25%; 
+    height: 100px;
+    margin-right: 10px;
+    
+}
 
 #title{
     background-color: #913c3c;
@@ -24,6 +33,20 @@ html body{
     font-size: 20px;
 }
 
-.list-group{
-    color: black;
+#randomNumber{
+    background-color: #724aab;
+    height: 50px;
+    margin-top: 20px;
 }
+
+#scoreBoard{
+    background-color: #b53d53;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#four{
+    margin-top: 20px;
+}
+
