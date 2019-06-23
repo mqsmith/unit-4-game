@@ -1,6 +1,6 @@
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     // Selects a random number to be shown at the start of the game
     // Number should be should be between 19 - 120
     var random = Math.floor(Math.random() * 101 + 19);
@@ -28,7 +28,7 @@ $(document).ready(function() {
     $("#losses").text("Losses: " + losses);
     $("#userScore").text("Your Score: " + userScore);
     //resets the game
-    function reset(){
+    function reset() {
         random = Math.floor(Math.random() * 101 + 19);
         num1 = Math.floor(Math.random() * 11 + 1);
         num2 = Math.floor(Math.random() * 11 + 1);
@@ -36,72 +36,73 @@ $(document).ready(function() {
         num4 = Math.floor(Math.random() * 11 + 1);
         userScore = 0;
         $("#userScore").text("Your Score: " + userScore);
+        $("#number").text(random);
     }
 
     //adds the wins to the userTotal
-    function win (){
+    function win() {
         wins++;
         alert("Winner, Winner!");
         $("#wins").text("Wins: " + wins);
         reset();
     }
     //addes the losses to the userTotal
-    function lose (){
+    function lose() {
         losses++;
         alert("Whomp, Whomp!");
         $("#losses").text("Losses: " + losses);
         reset();
     }
     //sets up click for jewels
-    $("#1").click(function(){
+    $("#1").click(function () {
         userScore = userScore + num1;
-    console.log("Your Score: " + userScore);
-    $("#userScore").text("Your Score: " + userScore); 
-          //sets win/lose conditions
-        if (userScore == random){
-          win();
+        console.log("Your Score: " + userScore);
+        $("#userScore").text("Your Score: " + userScore);
+        //sets win/lose conditions
+        if (userScore == random) {
+            win();
         }
-        else if ( userScore > random){
-          lose();
-        }   
-  })  
+        else if (userScore > random) {
+            lose();
+        }
+    })
 
-  $("#2").click(function(){
-    userScore = userScore + num2;
-console.log("Your Score: " + userScore);
-$("#userScore").text("Your Score: " + userScore); 
-      //sets win/lose conditions
-    if (userScore == random){
-      win();
-    }
-    else if ( userScore > random){
-      lose();
-    }   
-})  
-$("#3").click(function(){
-    userScore = userScore + num3;
-console.log("Your Score: " + userScore);
-$("#userScore").text("Your Score: " + userScore); 
-      //sets win/lose conditions
-    if (userScore == random){
-      win();
-    }
-    else if ( userScore > random){
-      lose();
-    }   
-})  
-$("#4").click(function(){
-    userScore = userScore + num4;
-console.log("Your Score: " + userScore);
-$("#userScore").text("Your Score: " + userScore); 
-      //sets win/lose conditions
-    if (userScore == random){
-      win();
-    }
-    else if ( userScore > random){
-      lose();
-    }   
-})  
-    
+    $("#2").click(function () {
+        userScore = userScore + num2;
+        console.log("Your Score: " + userScore);
+        $("#userScore").text("Your Score: " + userScore);
+        //sets win/lose conditions
+        if (userScore == random) {
+            win();
+        }
+        else if (userScore > random) {
+            lose();
+        }
+    })
+    $("#3").click(function () {
+        userScore = userScore + num3;
+        console.log("Your Score: " + userScore);
+        $("#userScore").text("Your Score: " + userScore);
+        //sets win/lose conditions
+        if (userScore == random) {
+            win();
+        }
+        else if (userScore > random) {
+            lose();
+        }
+    })
+    $("#4").click(function () {
+        userScore = userScore + num4;
+        console.log("Your Score: " + userScore);
+        $("#userScore").text("Your Score: " + userScore);
+        //sets win/lose conditions
+        if (userScore == random) {
+            win();
+        }
+        else if (userScore > random) {
+            lose();
+        }
+    })
+
 
 });
