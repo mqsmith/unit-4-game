@@ -1,28 +1,41 @@
 
 
-$(document).ready(function () {
+$(document).ready(function() {
     // Selects a random number to be shown at the start of the game
     // Number should be should be between 19 - 120
     var random = Math.floor(Math.random() * 101 + 19);
     console.log(random);
 
     // Appending random number to the randomNumber id in the html doc
-    $("#randomNumber").text(random);
+    $("#number").text(random);
 
     // Setting up random numbers for each jewel
     // Random number has to be between 1 - 12
-    var num1 = Math.floor(Math.random() * 11 + 1)
-    var num2 = Math.floor(Math.random() * 11 + 1)
-    var num3 = Math.floor(Math.random() * 11 + 1)
-    var num4 = Math.floor(Math.random() * 11 + 1)
+    var num1 = Math.floor(Math.random() * 11 + 1);
+    var num2 = Math.floor(Math.random() * 11 + 1);
+    var num3 = Math.floor(Math.random() * 11 + 1);
+    var num4 = Math.floor(Math.random() * 11 + 1);
     console.log(num1);
     console.log(num2);
     console.log(num3);
     console.log(num4);
 
-    //  Decaring variables for tallies
-
+    //Decaring variables for tallies
+    var userScore = 0;
+    var wins = 0;
+    var losses = 0;
+    $("#wins").text("Wins: " + wins);
+    $("#losses").text("Losses: " + losses);
+    $("#userScore").text("Your Score: " + userScore);
     //resets the game
+    function reset(){
+        random = Math.floor(Math.random() * 101 + 19);
+        num1 = Math.floor(Math.random() * 11 + 1);
+        num2 = Math.floor(Math.random() * 11 + 1);
+        num3 = Math.floor(Math.random() * 11 + 1);
+        num4 = Math.floor(Math.random() * 11 + 1);
+        userScore = 0;
+    }
 
     //adds the wins to the userTotal
 
