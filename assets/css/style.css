@@ -12,10 +12,10 @@ html body{
     color: black;
 }
 
-.gipy-embed{
-    width: 25%; 
-    height: 100px;
-    margin-right: 10px;
+.giphy-embed{
+    border-style: solid;
+    border-width: 3px;
+    border-color: #3c9091;
     
 }
 
@@ -37,6 +37,8 @@ html body{
     background-color: #724aab;
     height: 50px;
     margin-top: 20px;
+    font-weight: bold;
+    font-size: 30px;
 }
 
 #scoreBoard{
